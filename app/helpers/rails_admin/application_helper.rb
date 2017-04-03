@@ -70,29 +70,29 @@ module RailsAdmin
       )
     end
 
-    #def main_navigation
-    #  nodes_stack = RailsAdmin::Config.visible_models(controller: controller)
-    #  node_model_names = nodes_stack.collect { |c| c.abstract_model.model_name }
+    def main_navigation
+      nodes_stack = RailsAdmin::Config.visible_models(controller: controller)
+      node_model_names = nodes_stack.collect { |c| c.abstract_model.model_name }
 
-    #  nodes_stack.group_by(&:navigation_label).collect do |navigation_label, nodes|
-    #    nodes = nodes.select { |n| n.parent.nil? || !n.parent.to_s.in?(node_model_names) }
-    #    li_stack = navigation nodes_stack, nodes
+      nodes_stack.group_by(&:navigation_label).collect do |navigation_label, nodes|
+        nodes = nodes.select { |n| n.parent.nil? || !n.parent.to_s.in?(node_model_names) }
+        li_stack = navigation nodes_stack, nodes
 
-    #    label = navigation_label || t('admin.misc.navigation')
+        label = navigation_label || t('admin.misc.navigation')
 
-    #    %(<li class='dropdown-header'>#{capitalize_first_letter label}</li>#{li_stack}) if li_stack.present?
-    #  end.join.html_safe
-    #end
+        %(<li class='dropdown-header'>#{capitalize_first_letter label}</li>#{li_stack}) if li_stack.present?
+      end.join.html_safe
+    end
 
-    #def static_navigation
-    #  li_stack = RailsAdmin::Config.navigation_static_links.collect do |title, url|
-    #    content_tag(:li, link_to(title.to_s, url, target: '_blank'))
-    #  end.join
+    def static_navigation
+      li_stack = RailsAdmin::Config.navigation_static_links.collect do |title, url|
+        content_tag(:li, link_to(title.to_s, url, target: '_blank'))
+      end.join
 
-    #  label = RailsAdmin::Config.navigation_static_label || t('admin.misc.navigation_static_label')
-    #  li_stack = %(<li class='dropdown-header'>#{label}</li>#{li_stack}).html_safe if li_stack.present?
-    #  li_stack
-    #end
+      label = RailsAdmin::Config.navigation_static_label || t('admin.misc.navigation_static_label')
+      li_stack = %(<li class='dropdown-header'>#{label}</li>#{li_stack}).html_safe if li_stack.present?
+      li_stack
+    end
 
     def navigation(nodes_stack, nodes, level = 0)
       nodes.collect do |node|
