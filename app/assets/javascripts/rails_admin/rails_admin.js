@@ -19,5 +19,5 @@
 //=  require 'rails_admin/ra.widgets'
 //=  require 'rails_admin/ui'
 //=  require 'rails_admin/custom/ui'
-//=  require 'daterangepicker/daterangepicker'
-//=  require 'daterangepicker/moment'
+//=  require 'rails_admin/daterangepicker/daterangepicker'
+//=  require 'rails_admin/daterangepicker/moment'
