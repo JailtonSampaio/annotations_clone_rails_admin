@@ -21,3 +21,4 @@
 //=  require 'rails_admin/custom/ui'
 //=  require 'rails_admin/daterangepicker/daterangepicker'
 //=  require 'rails_admin/daterangepicker/moment'
+//=  require 'rails_admin/bootstrap_select/bootstrap-select'
