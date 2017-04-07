@@ -263,7 +263,7 @@
                 // Search functionnality
                 if (settings.search === true)
                 {
-                    availableContainer.prepend($('<div class="input-group"><input type="text" class="form-control ba-search" placeholder="'+ settings.searchPlaceholder +'"><span class="input-group-btn"><button class="btn btn-default ba-search-clear" type="button">' + settings.searchButtonText + '</button></span></div>'));
+                    availableContainer.prepend($('<div class="input-group"><input type="text" class="form-control ba-search" placeholder="'+ settings.searchPlaceholder +'"><span class="input-group-btn"><button class="fa fa-eraser btn btn-default ba-search-clear" type="button">' + settings.searchButtonText + '</button></span></div>'));
                     var searchInput = availableContainer.find('input.ba-search');
 
                     $(document).on('click', '.ba-search-clear', {
