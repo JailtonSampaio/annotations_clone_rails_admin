@@ -23,3 +23,4 @@
 //=  require 'rails_admin/daterangepicker/moment'
 //=  require 'rails_admin/boxautocomplete/boxautocomplete'
 //=  require 'rails_admin/highcharts/highcharts'
+//=  require 'rails_admin/chartkick/chartkick'
