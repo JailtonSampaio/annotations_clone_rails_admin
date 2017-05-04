@@ -22,5 +22,3 @@
 //=  require 'rails_admin/daterangepicker/daterangepicker'
 //=  require 'rails_admin/daterangepicker/moment'
 //=  require 'rails_admin/boxautocomplete/boxautocomplete'
-//=  require 'rails_admin/chartkick/highcharts'
-//=  require 'rails_admin/chartkick/chartkick'
